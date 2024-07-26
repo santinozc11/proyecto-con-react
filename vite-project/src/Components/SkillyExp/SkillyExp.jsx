@@ -54,10 +54,11 @@ const SkillyExp = () => {
                     key={index}
                     p={6}
                     borderTop="1px solid"
-                    borderColor="white"
+                    borderColor="gray.600"
                     transition="transform 0.3s"
                     borderBottom="1px solid"
-                    bg="transparent"
+                    bg="gray.800"
+                    borderRadius="md"
                     maxW="full"
                     mx="auto"
                     mt={index === 0 ? "18px" : "12px"}
