@@ -23,10 +23,10 @@ const Services = () => {
         align="center"
         justify="center"
         direction={{ base: "column", md: "row" }}
-        gap={{ base: 8, md: 16 }} // Adjust gap for responsive design
+        gap={{ base: 8, md: 16 }} 
         px={4}
       >
-        <Box flex="1" textAlign="center" mb={{ base: 16, md: 0 }} pr={{ md: 16 }}> {/* Added right padding for separation */}
+        <Box flex="1" textAlign="center" mb={{ base: 16, md: 0 }} pr={{ md: 16 }}> 
           <Heading as="h1" size="2xl" color="orange.300" mb={6}>
             Servicios que <br /> Ofrezco
           </Heading>
@@ -44,12 +44,12 @@ const Services = () => {
             </Box>
           </Flex>
         </Box>
-        <Box flex="2" ml={{ md: 16 }}> {/* Added left margin for separation */}
+        <Box flex="2" ml={{ md: 16 }}> 
           <Flex direction="column" gap={12}>
             {[
-              { img: "/public/computer.svg", title: "Diseño Web", description: "20 Proyectos" },
-              { img: "/public/mobile.svg", title: "Diseño de Apps", description: "20 Proyectos" },
-              { img: "/public/product.svg", title: "Diseño de Producto", description: "20 Proyectos" },
+              { img: "/computer.svg", title: "Diseño Web", description: "20 Proyectos" },
+              { img: "/mobile.svg", title: "Diseño de Apps", description: "20 Proyectos" },
+              { img: "/product.svg", title: "Diseño de Producto", description: "20 Proyectos" },
             ].map((service, index) => (
               <MotionFlex
                 key={index}

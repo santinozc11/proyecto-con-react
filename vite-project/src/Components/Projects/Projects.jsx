@@ -8,9 +8,9 @@ const MotionBox = motion(Box);
 const MotionImage = motion(Image);
 
 const projects = [
-  { img: "public/project1.jpg" },
-  { img: "public/project2.jpg" },
-  { img: "public/project3.jpg" },
+  { img: "/project1.jpg" },
+  { img: "/project2.jpg" },
+  { img: "/project3.jpg" },
 ];
 
 const Projects = () => {
