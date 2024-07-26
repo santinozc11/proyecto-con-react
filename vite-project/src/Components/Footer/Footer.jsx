@@ -147,6 +147,7 @@ const Footer = () => {
               height='200px'
               mt={6}
               position='relative'
+              bg="transparent"
             >
               <AlertIcon boxSize='40px' mr={0} />
               <Box>

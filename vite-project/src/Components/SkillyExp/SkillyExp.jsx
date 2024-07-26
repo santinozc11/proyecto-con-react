@@ -57,6 +57,7 @@ const SkillyExp = () => {
                     borderColor="white"
                     transition="transform 0.3s"
                     borderBottom="1px solid"
+                    bg="transparent"
                     maxW="full"
                     mx="auto"
                     mt={index === 0 ? "18px" : "12px"}
