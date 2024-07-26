@@ -35,8 +35,8 @@ const SkillyExp = () => {
           <Heading as="h1" className="title" color="orange.300" mb={6}>Habilidades y<br />Experiencia</Heading>
           <Text py={{ base: 4, md: 6 }} color="gray.400">Reportorio de habilidades y detalles sobre mi experiencia.</Text>
           <Flex className="skillyexp-content" justify="center" flexWrap="wrap" gap={{ base: 4, md: 6 }}>
-            <Box className="skills" flex="1" maxW={{ base: "full", md: "45%" }} m={4} mt={8}> {/* Ajuste aquí */}
-              <Heading as="h2" color="orange.300" mb={4}>Habilidades</Heading>
+            <Box className="skills" flex="1" maxW={{ base: "full", md: "45%" }} m={4} mt={8}>
+              <Heading as="h2" color="orange.300" mb={4}>Habilidades</Heading> {/* Ajuste aquí */}
               <SimpleGrid columns={{ base: 2, sm: 3, md: 3 }} spacing={{ base: 4, md: 6 }} justifyContent="center">
                 {skills.map((skill, index) => (
                   <Box key={index} className="skill-item" p={4} borderRadius="md" transition="transform 0.3s, background-color 0.3s" mx="auto" _hover={{ transform: 'translateY(-10px)', bg: 'gray.800' }} boxShadow="md" border="2px solid" borderColor="white">
@@ -46,8 +46,8 @@ const SkillyExp = () => {
                 ))}
               </SimpleGrid>
             </Box>
-            <Box className="experience" flex="1" maxW={{ base: "full", md: "45%" }} m={4}>
-              <Heading as="h2" color="orange.300" mb={4}>Experiencia</Heading>
+            <Box className="experience" flex="1" maxW={{ base: "full", md: "45%" }} m={4} mt={{ base: 8, md: 0 }}> {/* Ajuste aquí */}
+              <Heading as="h2" color="orange.300" mb={4}>Experiencia</Heading> {/* Ajuste aquí */}
               <SimpleGrid spacing={0}>
                 {experiences.map((exp, index) => (
                   <Box
