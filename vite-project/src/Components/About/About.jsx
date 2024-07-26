@@ -7,7 +7,6 @@ const About = () => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
-  // Controla el estado de visibilidad para el efecto de entrada
   React.useEffect(() => {
     setIsVisible(true);
   }, []);
@@ -41,7 +40,7 @@ const About = () => {
               <Text fontSize={{ base: 'md', md: 'lg' }} mb={4}>
                 Mi nombre es Santino y soy un estudiante de Ingeniería de Sistemas. Desde muy joven, he sentido una gran pasión por la tecnología y el desarrollo de software. Me encanta enfrentarme a nuevos desafíos y aprender constantemente nuevas habilidades. Mi objetivo es utilizar mis conocimientos y experiencia para crear soluciones innovadoras que impacten de manera positiva en la vida de las personas.
               </Text>
-              <Button mt={4} onClick={handleFlip} colorScheme="orange" size={{ base: 'sm', md: 'md' }}>
+              <Button mt={4} onClick={handleFlip} colorScheme="yellow" size={{ base: 'sm', md: 'md' }}>
                 Redes
               </Button>
             </Box>
@@ -107,7 +106,7 @@ const About = () => {
                   <FaInstagram size={iconSize} color="white" />
                 </Link>
               </VStack>
-              <Button mt={4} onClick={handleFlip} colorScheme="orange" size={{ base: 'sm', md: 'md' }}>
+              <Button mt={4} onClick={handleFlip} colorScheme="yellow" size={{ base: 'sm', md: 'md' }}>
                 Volver
               </Button>
             </Box>

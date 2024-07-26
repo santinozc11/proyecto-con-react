@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Box, Heading, Text, SimpleGrid, Flex, Image, Grid, GridItem, Collapse, Button, Fade } from '@chakra-ui/react';
 
 const skills = [
-  { name: "HTML", img: "public/html.svg" },
-  { name: "CSS", img: "public/css.svg" },
-  { name: "JavaScript", img: "public/javascript.svg" },
-  { name: "SQL", img: "public/sql.svg" },
-  { name: "Python", img: "public/python.svg" },
-  { name: "Java", img: "public/java.svg" },
+  { name: "HTML", img: "/html.svg" },
+  { name: "CSS", img: "/css.svg" },
+  { name: "JavaScript", img: "/javascript.svg" },
+  { name: "SQL", img: "/sql.svg" },
+  { name: "Python", img: "/python.svg" },
+  { name: "Java", img: "/java.svg" },
 ];
 
 const experiences = [
@@ -72,7 +72,7 @@ const SkillyExp = () => {
                           <Heading as="h3" fontSize={{ base: 'lg', md: 'xl' }} color="white">{exp.title}</Heading>
                           <Text fontSize={{ base: 'sm', md: 'md' }} color="white">{exp.company}</Text>
                           <Flex direction="column" align={{ base: 'center', md: 'start' }} mt={4}>
-                            <Button onClick={() => toggleExpand(index)} colorScheme="orange">
+                            <Button onClick={() => toggleExpand(index)} colorScheme="yellow">
                               {expanded === index ? 'Mostrar Menos' : 'Mostrar Más'}
                             </Button>
                             <Collapse in={expanded === index}>

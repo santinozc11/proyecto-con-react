@@ -80,7 +80,7 @@ const Hero = () => {
             </MotionText>
             <MotionButton
               mt={6}
-              colorScheme="orange"
+              colorScheme="yellow"
               as="a"
               href="#contact-list"
               size={buttonSize}

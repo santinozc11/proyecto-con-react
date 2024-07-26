@@ -129,7 +129,7 @@ const Footer = () => {
                   </Field>
                   <ErrorMessage name="message" component={Text} color="red.500" />
                 </Box>
-                <Button colorScheme="orange" type="submit" isLoading={isSubmitting} transition="all 0.3s ease" _hover={{ bg: 'orange.400' }}>
+                <Button colorScheme="yellow" type="submit" isLoading={isSubmitting} transition="all 0.3s ease" _hover={{ bg: 'orange.400' }}>
                   Enviar
                 </Button>
               </Form>
