@@ -39,7 +39,7 @@ const SkillyExp = () => {
               <Heading as="h2" color="orange.300" mb={4}>Habilidades</Heading>
               <SimpleGrid columns={{ base: 2, sm: 3, md: 3 }} spacing={{ base: 4, md: 6 }} justifyContent="center">
                 {skills.map((skill, index) => (
-                  <Box key={index} className="skill-item" p={4} borderRadius="md" transition="transform 0.3s" mx="auto" _hover={{ transform: 'translateY(-10px)' }}bg="gray.800">
+                  <Box key={index} className="skill-item" p={4} borderRadius="md" transition="transform 0.3s" mx="auto" _hover={{ transform: 'translateY(-10px)' }}bg="gray.800" boxShadow="md">
                     <Image src={skill.img} alt={skill.name} bg="orange.300" p={3} borderRadius="full" mb={4} maxW="80px" maxH="80px" />
                     <Text fontSize={{ base: 'md', md: 'lg' }} color="white">{skill.name}</Text>
                   </Box>
@@ -56,7 +56,7 @@ const SkillyExp = () => {
                     borderTop="1px solid"
                     borderColor="white"
                     transition="transform 0.3s"
-                    borderBottom="1px solid"
+                    borderBottom="2px solid"
                     bg="gray.800"
                     borderRadius="md"
                     maxW="full"
