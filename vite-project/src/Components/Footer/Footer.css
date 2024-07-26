@@ -1,0 +1,44 @@
+/* Footer.css */
+.animated-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1f1f1f 0%, #000000 100%);
+  background-size: 400% 400%;
+  animation: gradientAnimation 8s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.footer-socials a {
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #ff9900;
+  transform: scale(1.1) rotate(10deg);
+}
+
