@@ -29,7 +29,7 @@ const Header = () => {
         flexDirection={{ base: 'column', md: 'row' }} 
         textAlign={{ base: 'center', md: 'left' }}
       >
-        <Heading size={headingSize} color="orange.300" mb={{ base: 4, md: 0 }}>Portfolio</Heading>
+        <Heading size={headingSize} color="orange.300" mb={{ base: 4, md: 0 }}>Portafolio</Heading>
         <Flex
           direction={{ base: 'column', md: 'row' }} 
           align={{ base: 'center', md: 'center' }}
