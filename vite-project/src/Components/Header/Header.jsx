@@ -10,7 +10,7 @@ const Header = () => {
     config: { tension: 170, friction: 26 }
   });
 
-  // Determine the font size based on the viewport size
+  
   const headingSize = useBreakpointValue({ base: 'sm', md: 'md' });
   const linkSize = useBreakpointValue({ base: 'sm', md: 'md' });
   

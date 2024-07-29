@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
+
 const MotionBox = motion(Box);
 const MotionImage = motion(Image);
 
@@ -42,14 +43,14 @@ const Projects = () => {
                   borderRadius="lg"
                   overflow="hidden"
                   whileHover={{
-                    translateY: -20,
+                    translateY: -10,
                     scale: 1.05,
-                    boxShadow: "0px 20px 30px rgba(0, 0, 0, 0.3)",
-                    transition: { duration: 0.6, ease: "easeInOut" }
+                    boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)",
+                    transition: { duration: 0.5, ease: "easeInOut" }
                   }}
                   initial={{ opacity: 0, translateY: 20 }}
                   animate={{ opacity: 1, translateY: 0 }}
-                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
                 >
                   <MotionImage
                     src={project.img}
@@ -58,7 +59,7 @@ const Projects = () => {
                     w="100%"
                     objectFit="cover"
                     whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
                   />
                 </MotionBox>
               </div>
@@ -74,7 +75,9 @@ const Projects = () => {
           </button>
         </div>
       </Box>
-      <Link href="#" color="orange.300" mt={6} fontWeight="bold" _hover={{ textDecoration: 'underline' }}>Ver todos los proyectos</Link>
+      <Link href="#" color="orange.300" mt={6} fontWeight="bold" _hover={{ textDecoration: 'underline' }}>
+        Ver todos los proyectos
+      </Link>
     </Box>
   );
 };

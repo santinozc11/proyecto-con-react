@@ -6,9 +6,21 @@ import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import './Footer.css';
 
 const validationSchema = Yup.object({
-  name: Yup.string().min(2, 'El nombre debe tener al menos 2 caracteres').required('Nombre es requerido'),
-  email: Yup.string().email('Correo electrónico inválido').required('Correo electrónico es requerido'),
-  message: Yup.string().min(10, 'El mensaje debe tener al menos 10 caracteres').required('Mensaje es requerido'),
+  name: Yup.string()
+    .min(2, 'El nombre debe tener al menos 2 caracteres')
+    .matches(/^[A-Za-z\s]+$/, 'El nombre solo puede contener letras y espacios')
+    .required('Nombre es requerido'),
+  email: Yup.string()
+    .email('Correo electrónico inválido')
+    .required('Correo electrónico es requerido')
+    .matches(/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+com$/, 'El correo electrónico debe terminar en .com'),
+  confirmEmail: Yup.string()
+    .email('Correo electrónico inválido')
+    .oneOf([Yup.ref('email'), null], 'Los correos electrónicos deben coincidir')
+    .required('Confirmación de correo electrónico es requerida'),
+  message: Yup.string()
+    .min(10, 'El mensaje debe tener al menos 10 caracteres')
+    .required('Mensaje es requerido'),
 });
 
 const Footer = () => {
@@ -99,7 +111,7 @@ const Footer = () => {
             Contacto
           </Heading>
           <Formik
-            initialValues={{ name: '', email: '', message: '' }}
+            initialValues={{ name: '', email: '', confirmEmail: '', message: '' }}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
           >
@@ -122,6 +134,14 @@ const Footer = () => {
                   <ErrorMessage name="email" component={Text} color="red.500" />
                 </Box>
                 <Box mb={4}>
+                  <Field name="confirmEmail">
+                    {({ field }) => (
+                      <Input {...field} type="email" placeholder="Confirmar correo electrónico" size="lg" borderColor="orange.300" _placeholder={{ color: 'gray.400' }} />
+                    )}
+                  </Field>
+                  <ErrorMessage name="confirmEmail" component={Text} color="red.500" />
+                </Box>
+                <Box mb={4}>
                   <Field name="message">
                     {({ field }) => (
                       <Textarea {...field} placeholder="Mensaje" size="lg" borderColor="orange.300" _placeholder={{ color: 'gray.400' }} />
@@ -139,21 +159,24 @@ const Footer = () => {
           <SlideFade in={isVisible}>
             <Alert
               status='success'
-              variant='subtle'
+              variant='solid'
               flexDirection='column'
               alignItems='center'
               justifyContent='center'
               textAlign='center'
-              height='200px'
+              height='auto'
               mt={6}
               position='relative'
-              bg='rgba(0, 98, 0, 0.5)'
+              bg='green.500'
+              color='white'
               borderRadius='md'
+              p={6}
+              boxShadow='lg'
             >
-              <AlertIcon boxSize='40px' mr={0} />
+              <AlertIcon boxSize='40px' />
               <Box>
-                <AlertTitle mt={4} mb={1} fontSize='lg'>
-                  Formulario enviado!
+                <AlertTitle mt={4} mb={1} fontSize='lg' fontWeight='bold'>
+                  Formulario enviado con éxito!
                 </AlertTitle>
                 <AlertDescription maxWidth='sm'>
                   Gracias por contactarme. Me pondré en contacto contigo pronto.

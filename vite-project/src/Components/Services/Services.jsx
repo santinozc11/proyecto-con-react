@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Heading, Text, Flex, Image } from "@chakra-ui/react";
 import { motion } from 'framer-motion';
 
+
 const MotionBox = motion(Box);
 const MotionFlex = motion(Flex);
 const MotionImage = motion(Image);
@@ -67,6 +68,7 @@ const Services = () => {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
+                aria-label={`Servicio de ${service.title}`}
               >
                 <MotionImage
                   src={service.img}
@@ -77,6 +79,7 @@ const Services = () => {
                   bg="orange.300"
                   p={3}
                   whileHover={{ rotate: 360, transition: { duration: 0.5 } }}
+                  loading="lazy" 
                 />
                 <Box>
                   <Heading as="h3" size="md" color="orange.300" mb={2}>{service.title}</Heading>

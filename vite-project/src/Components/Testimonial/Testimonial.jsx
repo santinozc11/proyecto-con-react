@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-// Crear los componentes animados
+
 const MotionBox = motion(Box);
 const MotionImage = motion(Image);
 
@@ -45,24 +45,26 @@ const Testimonial = () => {
                   bg="white"
                   borderRadius="lg"
                   overflow="hidden"
+                  position="relative" 
                   whileHover={{
-                    translateY: -20,
+                    translateY: -10,
                     scale: 1.05,
-                    boxShadow: "0px 20px 30px rgba(0, 0, 0, 0.3)",
-                    transition: { duration: 0.6, ease: "easeInOut" }
+                    boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.3)",
+                    transition: { duration: 0.5, ease: "easeInOut" }
                   }}
                   initial={{ opacity: 0, translateY: 20 }}
                   animate={{ opacity: 1, translateY: 0 }}
-                  transition={{ duration: 0.6, ease: "easeInOut" }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
                 >
                   <MotionImage
                     src={testimonial.img}
                     alt={`Testimonial ${index + 1}`}
                     h="100%"
                     w="100%"
-                    objectFit="cover"
+                    objectFit="cover" 
                     whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    style={{ position: 'absolute', top: 0, left: 0 }} 
                   />
                 </MotionBox>
               </div>
