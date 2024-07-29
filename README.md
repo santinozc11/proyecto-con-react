@@ -3,6 +3,7 @@
 ## Descripción
 
 Este proyecto es la segunda entrega del trabajo práctico final de la Diplomatura en Programación FullStack. Consiste en escalar un portafolio personal, inicialmente diseñado en HTML y CSS, a una aplicación React. Utiliza diversas tecnologías modernas para mejorar la funcionalidad, el diseño y la experiencia del usuario.
+
 Diseño Original: https://www.behance.net/gallery/145581741/Personal-portfolio-landing-page?tracking_source=search_projects%7Cpersonal+portfolio&l=16
 
 ## Tecnologías Utilizadas
